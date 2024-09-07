@@ -43,7 +43,7 @@
       <div class="spinner-grow" role="status">
         <span class="sr-only"></span>
       </div>
-      <h3>Esperando Billetera... {{isDrizzleInitialized}} </h3>
+      <h3>Esperando Billetera... </h3>
     </div>
   </v-app>
 </template>

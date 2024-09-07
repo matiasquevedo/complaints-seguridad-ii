@@ -13,7 +13,7 @@
     </div>
 
     <div class="d-grid gap-2">
-      <button class="btn btn-primary btn-block" @click.prevent="onSubmit">{{buttonTitle}}</button>
+      <button class="btn btn-primary btn-block" :disabled="false" @click.prevent="onSubmit">{{buttonTitle}}</button>
     </div>
 
     

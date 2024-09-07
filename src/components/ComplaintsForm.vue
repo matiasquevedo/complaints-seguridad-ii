@@ -2,7 +2,7 @@
   <div class="container">
 
 
-    <h1>Nueva Queja</h1>
+    <h1>Nueva Denuncias</h1>
 
     <div class="add-plums">
       <contract-form

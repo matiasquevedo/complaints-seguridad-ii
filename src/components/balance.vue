@@ -1,7 +1,13 @@
 
 <template>
   <div class="text-left p-3 m-3">
-    <h2>Lista de quejas</h2>
+    <h2>Lista de quejas </h2>
+    <div v-if="complaints.length === 0">
+      
+      <div class="border rounded text-center p-3">
+        No hay quejas... <v-icon>patch-minus</v-icon>
+      </div>
+    </div>
     <div v-for="(complaint, index) in complaints" :key="index" class="border p-2 rounded mb-3">
       <div>
         <b>Bloque: </b>{{complaint.block}} - {{formatTimestamp(complaint.date)}}
@@ -43,7 +49,7 @@ export default {
     const web3 = new Web3('http://localhost:7545');
 
     // Obtén la instancia del contrato con la ABI y la dirección
-    const contract = new web3.eth.Contract(Complaints.abi, "0x30E567E16B0B232c1833C6248f00C3473216A86d");
+    const contract = new web3.eth.Contract(Complaints.abi, "0x1428498CF634D761744a6FD0bD538441ea8FeBCC");
 
     // Llama a la función getAllComplaints del contrato
     const allComplaints = await contract.methods.getAllComplaints().call();
